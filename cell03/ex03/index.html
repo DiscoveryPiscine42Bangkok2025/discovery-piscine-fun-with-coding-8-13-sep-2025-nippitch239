@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Document</title>
+  <style>
+    body {
+      font-family: system-ui, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial;
+      padding: 20px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    #controls {
+      margin-bottom: 12px;
+    }
+
+    button {
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #ft_list {
+      border: 1px solid #ccc;
+      min-height: 60px;
+      padding: 10px;
+      border-radius: 6px;
+      background: #fafafa;
+    }
+
+    .todo {
+      padding: 8px 10px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      background: white;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .todo:hover {
+      transform: translateY(-1px);
+    }
+
+    .note {
+      margin-top: 10px;
+      color: #555;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>To-Do List</h1>
+  <div id="controls">
+    <button id="newBtn">New</button>
+  </div>
+
+  <div id="ft_list"></div>
+
+</body>
+<script src="todo.js"></script>
+</html>
