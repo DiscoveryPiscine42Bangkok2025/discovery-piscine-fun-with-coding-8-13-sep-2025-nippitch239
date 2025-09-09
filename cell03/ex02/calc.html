@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <input id="a" type="number">
+    <select name="" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input id="b" type="number">
+    <button onclick="a()">Try me!</button>
+</body>
+<script>
+
+    setInterval(() =>{
+        alert("Please, use me...");
+    }, 30000)
+
+    function a() {
+        var a = Number(document.getElementById("a").value);
+        var b = Number(document.getElementById("b").value);
+        var ops = document.getElementById("op");
+
+        var result = 0;
+        if ((ops.value == "/" || ops.value == "%") && (b == 0)) {
+            console.log("It’s over 9000!");
+        } else {
+
+            if ((a >= 0) && (b >= 0)) {
+                if (ops.value == "+") {
+                    result = a + b;
+                } else if (ops.value == "-") {
+                    result = a - b;
+                } else if (ops.value == "*") {
+                    result = a * b;
+                } else if (ops.value == "/") {
+                    result = a / b;
+                } else if (ops.value == "%") {
+                    result = a % b;
+                }
+                console.log(result);
+            } else {
+                console.log("Error :()");
+            }
+        }
+
+    }
+</script>
+
+</html>

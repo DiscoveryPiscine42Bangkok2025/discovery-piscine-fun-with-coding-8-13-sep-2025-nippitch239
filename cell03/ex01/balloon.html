@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #balloon {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        border-radius: 100%;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div onclick="a()" id="balloon"></div>
+</body>
+<script>
+    var b = document.getElementById("balloon");
+
+    b.addEventListener("mouseover", () => {
+        var curr = parseInt(window.getComputedStyle(b).width);
+        if(curr >= 220){
+            curr -= 50
+            b.style.width = curr+"px";
+            b.style.height = curr+"px";
+        }
+    })
+
+
+
+    function a() {
+        var b = document.getElementById("balloon");
+
+        var curr = parseInt(window.getComputedStyle(b).width);
+
+        if ((curr + 10) <= 420) {
+            curr += 10;
+            b.style.width = curr + "px";
+            b.style.height = curr + "px";
+        } else {
+            b.style.width = "200px";
+            b.style.height = "200px";
+
+        }
+    }
+
+
+</script>
+
+</html>
