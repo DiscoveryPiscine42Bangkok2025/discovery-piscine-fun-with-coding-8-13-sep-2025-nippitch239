@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume - Example</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ปรับเนื้อหาไม่ให้ซ่อนใต้ navbar fixed-top */
+    body {
+      padding-top: 70px;
+      /* ปรับให้เท่าความสูง navbar */
+      scroll-behavior: smooth;
+      /* smooth scroll */
+    }
+
+    /* Placeholder "photo" แบบตัวอักษร */
+    .photo-placeholder {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #e9ecef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: 700;
+      color: #495057;
+      border: 3px solid #dee2e6;
+    }
+
+    /* แต่ละ section ให้มีความสูงอย่างน้อย viewport */
+    section {
+      padding: 60px 0;
+    }
+
+    /* ไฮไลท์ nav active */
+    .nav-link.active {
+      font-weight: 600;
+      color: #0d6efd !important;
+    }
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
+
+  <!-- Fixed navbar -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Portfolio —</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
+        aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- ต้องมีอย่างน้อย 3 ลิงก์ไปยังส่วนต่างๆ -->
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience & Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PART 1: About -->
+  <section id="about" class="bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <!-- รูปโดยใช้ตัวอักษร -->
+          <div class="photo-placeholder mx-auto">NK</div>
+        </div>
+        <div class="col-md-8">
+          <h1 class="mb-0">nkonghua.</h1>
+          <p class="lead text-muted mb-2">Information Technology</p>
+          <p> </p>
+          <div>
+            <a class="btn btn-outline-primary btn-sm me-2" href="#experience">experience</a>
+            <a class="btn btn-outline-secondary btn-sm" href="#contact">contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 2: Experience & Skills -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="mb-4">(Experience & Skills)</h2>
+
+      <!-- Experiences (cards) -->
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Bebras computational thinking -Nation</h5>
+              <h6 class="card-subtitle mb-2 text-muted">2023 —</h6>
+              <p class="card-text">first runner-up bebras computational thinking challenge 2023<br>final round senior
+                high school group.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Thailand Cyber Top Talent -Nation</h5>
+              <h6 class="card-subtitle mb-2 text-muted">2023 —</h6>
+              <p class="card-text">participating no. 70 on Thailand Cyber Top Talent and participating no. 80 on group
+                Thailand Cyber Top Talent</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">4 KIBO ROBOT programming challenge -Nation</h5>
+              <h6 class="card-subtitle mb-2 text-muted">2023 —</h6>
+              <p class="card-text">participating programming on JAVA</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Arduino -Nation</h5>
+              <h6 class="card-subtitle mb-2 text-muted">2023 —</h6>
+              <p class="card-text">participating programming on C and Arduino</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    <!-- Skills (badges) -->
+    <h5 class="mb-2">Skills</h5>
+    <div class="mb-4">
+      <span class="badge rounded-pill border me-1 mb-1 text-muted">HTML</span>
+      <span class="badge rounded-pill border me-1 mb-1 text-muted">CSS</span>
+      <span class="badge rounded-pill border me-1 mb-1 text-muted">JavaScript</span>
+      <span class="badge rounded-pill border me-1 mb-1 text-muted">Bootstrap</span>
+      <span class="badge rounded-pill border me-1 mb-1 text-muted">Responsive Design</span>
+    </div>
+      
+      <!-- ตารางสรุปทักษะเชิงเปรียบเทียบ (ตัวอย่างการใช้ตาราง) -->
+      <h5 class="mb-3">Skill levels</h5>
+      <div class="table-responsive ">
+        <table class="table table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Skill</th>
+              <th>Experience (years)</th>
+              <th>Level</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML / CSS</td>
+              <td>5</td>
+              <td>Advanced</td>
+              <td>Responsive, accessibility basics</td>
+            </tr>
+            <tr>
+              <td>Bootstrap</td>
+              <td>3</td>
+              <td>Advanced</td>
+              <td>Layout, components, utilities</td>
+            </tr>
+            <tr>
+              <td>React</td>
+              <td>2</td>
+              <td>Intermediate</td>
+              <td>Component-based UI</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+
+  <!-- PART 3: Contact -->
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <h2 class="mb-3">Contact</h2>
+
+      <ul class="list-unstyled">
+        <li class="mb-2">Email: <a href="mailto:nkonghua@student.42bangkok.com">nkonghua@student.42bangkok.com</a></li>
+        <li class="mb-2">Phone: <a href="tel:+66000000000">+66 6366616666</a></li>
+        <li class="mb-2">GitHub: <a href="https://github.com/nippitch239" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+
+      <form onsubmit="return contactDemo(event)" class="row g-2 col-md-8">
+        <div class="col-md-6">
+          <input class="form-control" type="text" id="name" placeholder="ชื่อ" required>
+        </div>
+        <div class="col-md-6">
+          <input class="form-control" type="email" id="email" placeholder="อีเมล" required>
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" id="message" rows="4" placeholder="ข้อความ"></textarea>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">ส่งข้อความ</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
