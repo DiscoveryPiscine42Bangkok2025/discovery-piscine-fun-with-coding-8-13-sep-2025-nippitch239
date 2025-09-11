@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 100%;
+            background-color: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div id="balloon"></div>
+
+    <script>
+        $(document).ready(function() {
+            var $b = $("#balloon");
+
+            $b.mouseover(function() {
+                var curr = parseInt($b.css("width"));
+                if (curr >= 220) {
+                    curr -= 50;
+                    $b.css({ width: curr + "px", height: curr + "px" });
+                }
+            });
+
+            $b.click(function() {
+                var curr = parseInt($b.css("width"));
+
+                if ((curr + 10) <= 420) {
+                    var r = Math.floor(Math.random() * 256);
+                    var g = Math.floor(Math.random() * 256);
+                    var bColor = Math.floor(Math.random() * 256);
+                    $b.css("background-color", `rgb(${r}, ${g}, ${bColor})`);
+                    curr += 10;
+                    $b.css({ width: curr + "px", height: curr + "px" });
+                } else {
+                    $b.css({ width: "200px", height: "200px" });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

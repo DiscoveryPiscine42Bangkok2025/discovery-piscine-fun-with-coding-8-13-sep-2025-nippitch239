@@ -4,21 +4,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume - Example</title>
+  <title>Document</title>
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    /* ปรับเนื้อหาไม่ให้ซ่อนใต้ navbar fixed-top */
     body {
       padding-top: 70px;
-      /* ปรับให้เท่าความสูง navbar */
       scroll-behavior: smooth;
-      /* smooth scroll */
     }
 
-    /* Placeholder "photo" แบบตัวอักษร */
     .photo-placeholder {
       width: 150px;
       height: 150px;
@@ -33,22 +28,41 @@
       border: 3px solid #dee2e6;
     }
 
-    /* แต่ละ section ให้มีความสูงอย่างน้อย viewport */
     section {
       padding: 60px 0;
     }
 
-    /* ไฮไลท์ nav active */
     .nav-link.active {
       font-weight: 600;
       color: #0d6efd !important;
+    }
+
+    @media (max-width: 575.98px) {
+      .card {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    .img-container {
+      overflow: hidden;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .img-container:hover img {
+      transform: scale(1.2);
     }
   </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
 
-  <!-- Fixed navbar -->
   <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Portfolio —</a>
@@ -59,12 +73,14 @@
 
       <div class="collapse navbar-collapse" id="navCollapse">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <!-- ต้องมีอย่างน้อย 3 ลิงก์ไปยังส่วนต่างๆ -->
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#experience">Experience & Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#qualify">Qualify</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
@@ -74,19 +90,16 @@
     </div>
   </nav>
 
-  <!-- PART 1: About -->
   <section id="about" class="bg-light">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-4 text-center">
-          <!-- รูปโดยใช้ตัวอักษร -->
           <div class="photo-placeholder mx-auto">NK</div>
         </div>
-        <div class="col-md-8">
-          <h1 class="mb-0">nkonghua.</h1>
-          <p class="lead text-muted mb-2">Information Technology</p>
-          <p> </p>
-          <div>
+        <div class="col-md-8 m-auto mt-sm-3 ">
+          <h1 class="mb-0 text-md-start text-sm-center text-center">nkonghua.</h1>
+          <p class="lead text-muted mb-2 text-md-start text-sm-center text-center">Information Technology</p>
+          <div class="d-flex justify-content-center justify-content-md-start mt-sm-4">
             <a class="btn btn-outline-primary btn-sm me-2" href="#experience">experience</a>
             <a class="btn btn-outline-secondary btn-sm" href="#contact">contact</a>
           </div>
@@ -95,12 +108,10 @@
     </div>
   </section>
 
-  <!-- PART 2: Experience & Skills -->
-  <section id="experience">
-    <div class="container">
+  <section id="experience" class="pb-0">
+    <div class="container pb-0">
       <h2 class="mb-4">(Experience & Skills)</h2>
 
-      <!-- Experiences (cards) -->
       <div class="row g-3 mb-4">
         <div class="col-md-6">
           <div class="card h-100">
@@ -143,18 +154,16 @@
         </div>
       </div>
 
-    
-    <!-- Skills (badges) -->
-    <h5 class="mb-2">Skills</h5>
-    <div class="mb-4">
-      <span class="badge rounded-pill border me-1 mb-1 text-muted">HTML</span>
-      <span class="badge rounded-pill border me-1 mb-1 text-muted">CSS</span>
-      <span class="badge rounded-pill border me-1 mb-1 text-muted">JavaScript</span>
-      <span class="badge rounded-pill border me-1 mb-1 text-muted">Bootstrap</span>
-      <span class="badge rounded-pill border me-1 mb-1 text-muted">Responsive Design</span>
-    </div>
-      
-      <!-- ตารางสรุปทักษะเชิงเปรียบเทียบ (ตัวอย่างการใช้ตาราง) -->
+
+      <h5 class="mb-2">Skills</h5>
+      <div class="mb-4">
+        <span class="badge rounded-pill border me-1 mb-1 text-muted">HTML</span>
+        <span class="badge rounded-pill border me-1 mb-1 text-muted">CSS</span>
+        <span class="badge rounded-pill border me-1 mb-1 text-muted">JavaScript</span>
+        <span class="badge rounded-pill border me-1 mb-1 text-muted">Bootstrap</span>
+        <span class="badge rounded-pill border me-1 mb-1 text-muted">Responsive Design</span>
+      </div>
+
       <h5 class="mb-3">Skill levels</h5>
       <div class="table-responsive ">
         <table class="table table-bordered align-middle">
@@ -189,12 +198,99 @@
         </table>
       </div>
     </div>
-    </div>
-
   </section>
 
+  <section id="qualify" class="pt-4">
+    <div class="container">
+      <h2 class="m-auto mb-4">Qualify</h1>
+        <div class="row g-1">
+          <div class="col-md-6">
+            <div class="img-container">
+              <img src="assets/bebras2.png" class="img-fluid" alt="">
+            </div>
+          </div>
 
-  <!-- PART 3: Contact -->
+          <div class="col-md-6">
+            <div class="img-container">
+              <img src="assets/bebras.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="img-container">
+              <img src="assets/nsc.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="img-container">
+              <img src="assets/robotic.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-md-6 d-none extra-img">
+            <div class="img-container">
+              <img src="assets/codebotix.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-6 d-none extra-img">
+            <div class="img-container">
+              <img src="assets/data.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-6 d-none extra-img">
+            <div class="img-container">
+              <img src="assets/Arduino.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+
+          <div class="col-md-6 d-none extra-img">
+            <div class="img-container">
+              <img src="assets/GTC1.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-md-6 d-none extra-img">
+            <div class="img-container">
+              <img src="assets/GTC2.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-md-6 d-none extra-img">
+            <div class="img-container">
+              <img src="assets/GTC3.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-md-6 d-none extra-img">
+            <div class="img-container">
+              <img src="assets/thaimooc1.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-md-6 d-none extra-img">
+            <div class="img-container">
+              <img src="assets/thaimooc2.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+
+
+          <div class="d-flex justify-content-end m-auto" id="allQuali" style="cursor: pointer;">
+            <button class="btn btn-link text-muted fs-6 fs-md-5 sall">show all...</button>
+            <button class="btn btn-link text-muted fs-6 fs-md-5 smin d-none">show min...</button>
+
+          </div>
+        </div>
+    </div>
+  </section>
+
   <section id="contact" class="bg-light">
     <div class="container">
       <h2 class="mb-3">Contact</h2>
@@ -202,7 +298,7 @@
       <ul class="list-unstyled">
         <li class="mb-2">Email: <a href="mailto:nkonghua@student.42bangkok.com">nkonghua@student.42bangkok.com</a></li>
         <li class="mb-2">Phone: <a href="tel:+66000000000">+66 6366616666</a></li>
-        <li class="mb-2">GitHub: <a href="https://github.com/nippitch239" target="_blank" rel="noopener">GitHub</a></li>
+        <li class="mb-2">GitHub: <a href="https://github.com/nippitch239" target="_blank">GitHub</a></li>
       </ul>
 
       <form onsubmit="return contactDemo(event)" class="row g-2 col-md-8">
@@ -222,10 +318,41 @@
     </div>
   </section>
 
-  <!-- Bootstrap JS bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
+
+<script>
+  const btn = document.getElementById("allQuali");
+  const extraImgs = document.querySelectorAll(".extra-img");
+
+  const btnChild = btn.querySelector('.sall');
+  const btnChild2 = btn.querySelector('.smin');
+
+  const qualify = document.getElementById("qualify");
+
+  btnChild.addEventListener("click", () => {
+    extraImgs.forEach(img => img.classList.remove("d-none"));
+    btnChild.classList.add("d-none");
+    btnChild2.classList.remove("d-none");
+  });
+
+  btnChild2.addEventListener("click", () => {
+
+    if (qualify) {
+      setTimeout(() => {
+        extraImgs.forEach(img => img.classList.add("d-none"));
+        btnChild.classList.remove("d-none");
+        btnChild2.classList.add("d-none");
+      }, 500);
+    }
+    qualify.scrollIntoView({ behavior: "smooth", block: "start" });
+
+
+  });
+
+
+</script>
 
 </html>

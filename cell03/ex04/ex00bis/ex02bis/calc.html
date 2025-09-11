@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="a" type="number">
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input id="b" type="number">
+    <button id="try">Try me!</button>
+</body>
+
+<script>
+    $(document).ready(function() {
+        setInterval(() => {
+            alert("Please, use me...");
+        }, 30000);
+
+        // Click event
+        $("#try").click(function() {
+            var a = Number($("#a").val());
+            var b = Number($("#b").val());
+            var op = $("#op").val();
+
+            var result = 0;
+
+            if ((op === "/" || op === "%") && b === 0) {
+                console.log("It’s over 9000!");
+                return;
+            }
+
+            if (a >= 0 && b >= 0) {
+                switch(op) {
+                    case "+": result = a + b; break;
+                    case "-": result = a - b; break;
+                    case "*": result = a * b; break;
+                    case "/": result = a / b; break;
+                    case "%": result = a % b; break;
+                }
+                
+                console.log(result);
+            } else {
+                console.log("Error :()");
+            }
+        });
+    });
+</script>
+
+</html>
